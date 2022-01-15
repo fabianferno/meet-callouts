@@ -27,7 +27,7 @@ recognition.addEventListener("result", (e) => {
       const xhr = new XMLHttpRequest();
       xhr.open(
         "POST",
-        "https://discord.com/api/webhooks/877151812447252481/WJNtmt-LBFSj4KcJHVI_2PfVyaBnYBgS-aKnEWm1YX-AFherVskcDAoIcr-4K2ltgqsS",
+        process.env.DISCORD_WEBHOOK,
         true,
         null,
         null
@@ -55,7 +55,7 @@ recognition.start();
 recognition.onerror = function (event) {
   xhr.open(
     "POST",
-    "https://discord.com/api/webhooks/877151812447252481/WJNtmt-LBFSj4KcJHVI_2PfVyaBnYBgS-aKnEWm1YX-AFherVskcDAoIcr-4K2ltgqsS",
+    process.env.DISCORD_WEBHOOK,
     true,
     null,
     null
